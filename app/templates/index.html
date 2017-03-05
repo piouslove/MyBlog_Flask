@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if not current_user.is_authenticated %}
+<h1>Hi, Man!</h1>
+{% else %}
+<h1>Welcome back, {{ current_user.username }}!</h1>
+{% endif %}
+
+{% for post in posts %}
+    <p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
+{% endfor %}
+{% endblock %}
