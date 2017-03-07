@@ -17,7 +17,7 @@ def load_user(user_id):
 @app.route('/')
 @app.route('/index')
 def index():
-	user = { 'username': 'Piouslove' } # 用户名
+	user = { 'username': 'Piouslove' } # 示例用户名
 	posts = [
 		{
 			'author': {'username': 'Piouslove'},
